@@ -55,7 +55,7 @@ def saveFile(new_imglist, name):
     i = 0
     for imgUrl in new_imglist:
         splitPath = imgUrl.split('.')# 将path分割成目录和文件名二元组返回
-        fTail = splitPath.pop()
+        fTail = splitPath.pop() #pop:移除最后一个元素，并返回该值
         if len(fTail) > 3:
             fTail = 'jpg'
         fileName = name + "/" + str(i) + '.' + fTail
