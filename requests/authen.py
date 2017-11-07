@@ -9,12 +9,12 @@ def construct_url(end_point):
 
 def basic_auth():
     # 基本认证
-    response = requests.get(construct_url('user'), auth=('zhihong96','zdvhi93tg'))
+    response = requests.get(construct_url('user'), auth=('****','****'))
     print response.text
     print response.request.headers
 
 def basic_oauth():
-    headers = {'Authorization': 'token 2917be95313eb780e6cc68ad8eb552d00902362f'}
+    headers = {'Authorization': 'token ****'}
     # user/emails
     response = requests.get(construct_url('user/eamils'), headers=headers)
     print response.request.headers
@@ -34,7 +34,7 @@ class GithubAuth(AuthBase):
         return r 
 
 def oauth_advanced():
-    auth = GithubAuth('2917be95313eb780e6cc68ad8eb552d00902362f')
+    auth = GithubAuth('***')
     response = requests.get(construct_url('user/emails'), auth=auth)
     print response.request.headers
     print response.text
