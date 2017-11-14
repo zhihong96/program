@@ -47,7 +47,7 @@ class Spider_Model:
             # 如果pages数组中的内容小于2个
             if len(self.pages) < 2:
                 try:
-                    #获取新的页面
+                    # 获取新的页面
                     myPage = self.GetPage(str(self.page))
                     self.page += 1
                     self.pages.append(myPage)
