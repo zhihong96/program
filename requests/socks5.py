@@ -14,8 +14,9 @@ proxies = {
 
 def requestsproxy():
     response = requests.get(url, headers=headers, proxies=proxies, timeout=10)
-    print response.text
+    #print response.text
     print response.status_code
+    print response.headers
 
 def urllib2proxy():
     proxy = urllib2.ProxyHandler({'http': '127.0.0.1:1080','https': '127.0.0.1:1080',})
@@ -25,4 +26,4 @@ def urllib2proxy():
     print response.read()
 
 if __name__=='__main__':
-    urllib2proxy()
+    requestsproxy()
